@@ -88,14 +88,14 @@ export const Projects = () => {
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
                       <Row>
-                      {projects.map((project, index) => (
-                      <Col size={12} sm={6} md={4}>
-                        <ProjectCard
-                          {...project}
-                          onClick={() => handleShow(project)}
-                        />
-    </Col>
-  ))}
+                                {projects.map((project, index) => (
+            <Col size={12} sm={6} md={4} key={index}>
+              <ProjectCard
+                {...project}
+                onClick={() => handleShow(project)}
+              />
+            </Col>
+          ))} 
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="section">
