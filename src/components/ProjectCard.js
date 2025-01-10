@@ -1,5 +1,3 @@
-import { Col } from "react-bootstrap";
-import link from '../assets/img/link.png'
 
 export const ProjectCard = ({ title, description, imgUrl, onClick }) => {
   return (

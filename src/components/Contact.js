@@ -39,7 +39,7 @@ export const Contact = () => {
                       onClick={handleLinkedInClick}
                       className="linkedin-btn"
                     >
-                        <img src={linkedin}/>
+                        <img src={linkedin} alt="linkedin"/>
                       LinkedIn
                     </button>
                     <button
@@ -47,7 +47,7 @@ export const Contact = () => {
                       onClick={handleEmailClick}
                       className="linkedin-btn"
                     >
-                    <img src={email}/>
+                    <img src={email} alt="email"/>
                       dilmiishara2000@gmail.com
                     </button>
                   </div>

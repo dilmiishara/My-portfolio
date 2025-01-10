@@ -111,7 +111,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <img className="background-image-right" src={colorSharp2} alt="background-image"></img>
 
       {/* Modal for expanded project image */}
       <Modal show={showModal} onHide={handleClose} centered>
