@@ -236,7 +236,42 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
 
+
+
 /************ Banner Css ************/
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white; /* dark text for contrast */
+    background: rgba(255, 255, 255, 0.2); /* translucent white */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-download svg {
+    transition: transform 0.3s ease;
+}
+
+.btn-download:hover svg {
+    transform: translateX(5px);
+}
+
+
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
@@ -307,6 +342,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Skills Css ************/
+.col-md-6 {
+    padding: 15px;
+}
+
 #skills{
   position: relative;
 }
@@ -584,9 +623,6 @@ article .icon {
   z-index: -4;
 }
 
-
-
-
 /************ Projects Css ************/
 .contact {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
@@ -660,14 +696,174 @@ article .icon {
 }
 
 .modal-image {
-  width: 90%;
-  height: auto;
-  max-height: 90vh;
-  border-radius: 10px;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    max-height: 95vh;
+    border-radius: 10px;
+}
+
+.hide-navbar .navbar {
+    display: none !important;
+}
+
+/* Remove background, borders, and padding from modal */
+.image-only-modal .modal-content {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Make image fit fullscreen modal */
+.image-only-modal img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    cursor: pointer; /* so user knows they can click to close */
 }
 
 
-/************ Footer Css ************/
+/* Make modal transparent */
+.transparent-modal .modal-content {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.nav-arrow:hover {
+    transform: scale(1.2);
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.15);
+}
+
+.image-slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slider-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#prevBtn {
+    left: 20px;
+}
+
+#nextBtn {
+    right: 20px;
+}
+
+.close-btn {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2000;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+/* Ensure tab content is properly displayed */
+.tab-content > .tab-pane {
+    display: none;
+}
+
+.tab-content > .active {
+    display: block;
+}
+
+
+/************ experience Css ************/
+.experience {
+    padding: 0 0 50px 0;
+    position: relative;
+}
+.experience-bx {
+    background: #151515;
+    border-radius: 64px;
+    text-align: center;
+    padding: 60px 50px;
+    margin-top: -60px;
+}
+.experience h2 {
+    font-size: 45px;
+    font-weight: 700;
+}
+.experience p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px 0 75px 0;
+}
+.experience-slider {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+.experience-slider .item img {
+    width: 50%;
+    margin: 0 auto 15px auto;
+}
+/*.background-image-left {*/
+/*    top: 28%;*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    width: 40%;*/
+/*    z-index: -4;*/
+/*}*/
+.experience-img {
+    width: 18vw;
+    max-width: 100%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.experience-img {
+    width: 18vw;
+    max-width: 100%;
+    padding: 20px 0; /* padding top & bottom */
+}
+
+
+
 
 
 /************ Footer Css ************/

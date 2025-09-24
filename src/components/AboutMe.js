@@ -10,7 +10,9 @@ export const AboutMe = () => {
             <div className="about-bx wow zoomIn">
               <h2>About Me</h2>
               <p>
-                I'm Dilmi Ishara, an undergraduate at the University of Colombo, faculty of Technology. Aspiring to be a Full Stack Developer, I’m passionate about crafting innovative web solutions. Explore my portfolio to discover my skills, projects, and experiences.
+                I’m Dilmi Ishara, a final-year undergraduate at the University of Colombo, Faculty of Technology.
+                Aspiring to become a Full Stack Developer, I am passionate about building innovative and
+                scalable web solutions. Explore my portfolio to see my skills, projects, and experiences.
               </p>
               <div className="row align-items-center">
                 {/* Profile Picture */}
@@ -47,7 +49,7 @@ export const AboutMe = () => {
                     {/* Details Column 2 */}
                     <div className="col-md-6">
                       <p style={{ marginBottom: "5px" }}>
-                        <strong>Age:</strong> 22
+                        <strong>Age:</strong> 23
                       </p>
                       <p style={{ marginBottom: "5px" }}>
                         <strong>Degree:</strong> Bachelor of Information & Communication Technology (Honours)

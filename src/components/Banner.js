@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
+import DilmiCV from "../assets/img/cv.pdf";
+
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,7 +13,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Frontend Developer", "Fullstack Developer"];
+  const toRotate = [ "Fullstack Developer","Frontend Developer", "Backend Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -54,17 +56,26 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Dilmi`} <span className="txt-rotate" dataperiod="1000" data-rotate='[  "Frontend Developer", "Fullstack Developer"]'><span className="wrap">{text}</span></span></h1>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
-              </div>}
+                  <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                    <span className="tagline">Welcome to my Portfolio</span>
+                    <h1>{`Hi! I'm Dilmi`} <span className="txt-rotate" dataperiod="1000"
+                                                data-rotate='[  "Frontend Developer", "Fullstack Developer"]'><span
+                        className="wrap">{text}</span></span></h1>
+                    {/*<button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>*/}
+                    <a
+                        href={DilmiCV}   // path from public folder
+                        download="Dilmi-CV.pdf"
+                        className="btn-download"
+                    >
+                      Download CV <ArrowRightCircle size={25}/>
+                    </a>
+                  </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+              {({isVisible}) =>
+                  <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                   <img src={headerImg} alt="Header Img"/>
                 </div>}
             </TrackVisibility>
